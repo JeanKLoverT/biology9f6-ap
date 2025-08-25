@@ -1,0 +1,368 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: url("science\ background.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Default for homepage */
+  gap: 40px;
+  padding: 30px;
+}
+
+/* Overlay for darker background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
+/* Glassmorphism base */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 30px 40px;
+  text-align: center;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Top Section */
+.names {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.name:hover {
+  transform: scale(1.2);
+  color: #ffd369;
+}
+
+/* Middle Section */
+.middle-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Bottom Section */
+.bottom-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.footer-img {
+  max-width: 300px;
+  margin: auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.footer-img img {
+  width: 100%;
+  border-radius: 15px;
+}
+.footer-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+/* Female / Male Page Layout */
+body.single-card {
+  justify-content: center; /* Centers vertically */
+}
+
+.info-card {
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 25px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Team Gallery */
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bottom-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.team-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 25px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.member {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.member:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.member p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Title Hover: expand + yellow */
+.info-card h1 {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.info-card h1:hover {
+  color: #ffd60a; /* same yellow */
+  transform: scale(1.05);
+}
+
+/* Intro Text Hover: expand + glow white */
+.intro p {
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.intro p:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #ffffff,
+               0 0 20px #ffffff,
+               0 0 30px #ffffff;
+}
+
+/* Learn More Sources Hover: expand + glow white */
+.learn-more a {
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.learn-more a:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #ffffff,
+               0 0 20px #ffffff,
+               0 0 30px #ffffff;
+}
+
+/* 🔹 Horizontal "What To Do Instead" card */
+.horizontal-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  width: 90%;
+  margin: 2rem auto;
+  padding: 30px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.horizontal-card ul {
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.horizontal-card li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.horizontal-card li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #90ee90;
+}
+
+.horizontal-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4); /* white glow */
+}
+
+/* Solution Bubble Cards (Horizontal Layout) */
+.solution-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: nowrap;        /* 🔹 stay in a row */
+  overflow-x: auto;         /* 🔹 scroll on smaller screens */
+  padding-bottom: 10px;
+}
+
+.solution-card {
+  flex: 0 0 250px;          /* 🔹 fixed width so they stay flatter */
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 15px 20px;       /* 🔹 smaller padding = flatter look */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 160px;        /* 🔹 flatter card height */
+}
+
+.solution-card:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Optional: hide scrollbar in modern browsers */
+.solution-section::-webkit-scrollbar {
+  display: none;
+}
+.solution-section {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+
+/* Bubble Section Layout */
+.bubble-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.bubble-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bubble-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Big card at bottom */
+.bubble-card.wide {
+  flex: 1 1 100%;
+  max-width: 750px;
+  margin-bottom: 20px;
+}
+
+/* Info cards */
+.info-card {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.info-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Bottom illustration images */
+.trend-card .illustrations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;           /* space between images */
+  margin-top: 15px;
+}
+
+.trend-card .illustrations img {
+  width: 120px;        /* make them big and sharp */
+  height: auto;
+  object-fit: contain; /* keeps proportions */
+  image-rendering: crisp-edges;
+}
+
+/* On smaller screens */
+@media (max-width: 600px) {
+  .trend-card .illustrations img {
+    width: 80px;
+  }
+}
+
+/* Background credits Hover: expand + glow white */
+.background-credits a {
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.background-credits a:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #ffffff,
+               0 0 20px #ffffff,
+               0 0 30px #ffffff;}
